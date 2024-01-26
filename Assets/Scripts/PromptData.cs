@@ -4,7 +4,7 @@ using UnityEngine;
 [Serializable]
 public struct PromptResponse
 {
-    public string ResponseText;
+    public string Text;
     public int FunnyRating;
 }
 
