@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   promptText: Your mum wears...
   responses:
-  - ResponseText: army pants
+  - Text: Army boots
     FunnyRating: 2
-  - ResponseText: socks
+  - Text: Socks
     FunnyRating: 0
-  - ResponseText: poop
-    FunnyRating: 0
-  - ResponseText: a jacket
-    FunnyRating: 0
+  - Text: soup
+    FunnyRating: -1
+  - Text: a bikini
+    FunnyRating: -2
