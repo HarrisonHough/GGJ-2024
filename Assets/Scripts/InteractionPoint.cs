@@ -36,7 +36,7 @@ public class InteractionPoint : MonoBehaviour
         if (isTriggeredOnce) return;
         OnPromptTriggered?.Invoke(promptData);
         isTriggeredOnce = true;
-        GameManager.Instance.SwitchToCamera(newCamera);
+        newCamera.gameObject.SetActive(true);
         gameObject.SetActive(false);
     }
 }

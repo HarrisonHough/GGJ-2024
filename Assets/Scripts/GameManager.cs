@@ -30,7 +30,6 @@ public class GameManager : MonoBehaviour
 
     private void AfterDirectorResponse()
     {
-        SwitchToMainCamera();
         SetGameState(GameState.Playing);
     }
 
@@ -67,16 +66,5 @@ public class GameManager : MonoBehaviour
     public void SetGameState(GameState gameState)
     {
         GameState = gameState;
-    }
-    
-    public void SwitchToCamera(CinemachineVirtualCamera newCamera)
-    {
-        newCamera.gameObject.SetActive(true);
-    }
-    
-    public void SwitchToMainCamera()
-    {
-        cinemachineBrain.ActiveVirtualCamera.VirtualCameraGameObject.SetActive(false);
-        mainCamera.VirtualCameraGameObject.SetActive(true);
     }
 }
