@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using System.Collections.Generic;
+using Cinemachine;
 using Random = UnityEngine.Random;
 
 public class DirectorActions : MonoBehaviour
@@ -13,6 +14,7 @@ public class DirectorActions : MonoBehaviour
     [SerializeField] private AudioClip[] goodLines;
     [SerializeField] private AudioClip[] neutralLines;
     [SerializeField] private AudioClip[] badLines;
+    [SerializeField] private CinemachineVirtualCamera newCamera;
     [SerializeField] private AudioClip audienceLaugh;
     private Dictionary<LineType, (AudioClip[], string)> lines;
 
@@ -65,8 +67,9 @@ public class DirectorActions : MonoBehaviour
         {
             yield return new WaitForSeconds(audienceLaugh.length);
         }
+        GameManager.Instance.SwitchToCamera(newCamera);
         PlayLine(lineType);
-        yield return new WaitForSeconds(audioSource.clip.length);
+        yield return new WaitForSeconds(audioSource.clip.length + 0.5f);
         OnDirectorResponse?.Invoke();
     }
 }
