@@ -33,8 +33,8 @@ public class ScreenFader : MonoBehaviour
     {
         blackScreenImage.enabled = true;
         isFading = true;
-        float elapsedTime = 0f;
-        Color currentColor = startColor;
+        var elapsedTime = 0f;
+        var currentColor = startColor;
 
         while (elapsedTime < fadeDuration)
         {

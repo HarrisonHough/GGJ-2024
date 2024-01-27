@@ -38,6 +38,23 @@ public class GameManager : MonoBehaviour
 
     private void AfterDirectorResponse()
     {
+        if (playerScore >= SCORE_TARGET)
+        {
+            PlayerPrefs.SetInt(ENDING_PREF, 0);
+            StartCoroutine(WaitAndFinish(goodEndingClip));
+            return;
+        }
+        if( numberOfResponses >= 12)
+        {
+            PlayerPrefs.SetInt(ENDING_PREF, 1);
+            StartCoroutine(WaitAndFinish(neutralEndingClip));
+            return;
+        }
+        if(playerScore <=  0 )
+        {
+            PlayerPrefs.SetInt(ENDING_PREF, 2);
+            StartCoroutine(WaitAndFinish(badEndingClip));
+        }    
         SetGameState(GameState.Playing);
     }
 
@@ -58,23 +75,6 @@ public class GameManager : MonoBehaviour
         numberOfResponses++;
         playerScore += response.FunnyRating;
         playerScore = Mathf.Clamp(playerScore, 0f,SCORE_TARGET);
-        if (playerScore >= SCORE_TARGET)
-        {
-            PlayerPrefs.SetInt(ENDING_PREF, 0);
-            StartCoroutine(WaitAndFinish(goodEndingClip));
-            return;
-        }
-        if( numberOfResponses >= 12)
-        {
-            PlayerPrefs.SetInt(ENDING_PREF, 1);
-            StartCoroutine(WaitAndFinish(neutralEndingClip));
-            return;
-        }
-        if(playerScore <=  0 )
-        {
-            PlayerPrefs.SetInt(ENDING_PREF, 2);
-            StartCoroutine(WaitAndFinish(badEndingClip));
-        }    
     }
 
     
