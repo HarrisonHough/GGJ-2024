@@ -2065,6 +2065,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Laugh Bar
       objectReference: {fileID: 0}
+    - target: {fileID: 5040256978159426507, guid: 307ec0efa34137443b43594ff6bede1d, type: 3}
+      propertyPath: progress
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8892174935998676428, guid: 307ec0efa34137443b43594ff6bede1d, type: 3}
       propertyPath: m_Pivot.x
       value: 1
@@ -4628,6 +4632,17 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 1610912053}
+--- !u!114 &1172996521 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5040256978159426507, guid: 307ec0efa34137443b43594ff6bede1d, type: 3}
+  m_PrefabInstance: {fileID: 472847233}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0c6026826918c5418932b3c6e2cc9df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1186123525
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7723,6 +7738,102 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prompt Panel
       objectReference: {fileID: 0}
+    - target: {fileID: 1320191491897661471, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320191491897661471, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320191491897661471, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 836121185}
+    - target: {fileID: 1320191491897661471, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1172996521}
+    - target: {fileID: 1320191491897661471, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320191491897661471, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320191491897661471, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: HandleInteractionResponse
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320191491897661471, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: NudgeProgress
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320191491897661471, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320191491897661471, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: LaughBar, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320191491897661471, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320191491897661471, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1531049727805469088, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1531049727805469088, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1531049727805469088, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 836121185}
+    - target: {fileID: 1531049727805469088, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1172996521}
+    - target: {fileID: 1531049727805469088, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1531049727805469088, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1531049727805469088, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: HandleInteractionResponse
+      objectReference: {fileID: 0}
+    - target: {fileID: 1531049727805469088, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: NudgeProgress
+      objectReference: {fileID: 0}
+    - target: {fileID: 1531049727805469088, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1531049727805469088, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: LaughBar, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1531049727805469088, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1531049727805469088, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1734140598467292471, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -7770,6 +7881,54 @@ PrefabInstance:
     - target: {fileID: 2269186497950893192, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -140
+      objectReference: {fileID: 0}
+    - target: {fileID: 4728303749316812199, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4728303749316812199, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4728303749316812199, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 836121185}
+    - target: {fileID: 4728303749316812199, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1172996521}
+    - target: {fileID: 4728303749316812199, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4728303749316812199, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4728303749316812199, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: HandleInteractionResponse
+      objectReference: {fileID: 0}
+    - target: {fileID: 4728303749316812199, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: NudgeProgress
+      objectReference: {fileID: 0}
+    - target: {fileID: 4728303749316812199, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4728303749316812199, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: LaughBar, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4728303749316812199, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4728303749316812199, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4811683639633745465, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
       propertyPath: m_IsActive
@@ -7878,6 +8037,54 @@ PrefabInstance:
     - target: {fileID: 5526419251631046960, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -140
+      objectReference: {fileID: 0}
+    - target: {fileID: 6005135984536566740, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6005135984536566740, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6005135984536566740, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 836121185}
+    - target: {fileID: 6005135984536566740, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1172996521}
+    - target: {fileID: 6005135984536566740, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6005135984536566740, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6005135984536566740, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: HandleInteractionResponse
+      objectReference: {fileID: 0}
+    - target: {fileID: 6005135984536566740, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: NudgeProgress
+      objectReference: {fileID: 0}
+    - target: {fileID: 6005135984536566740, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6005135984536566740, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: LaughBar, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6005135984536566740, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6005135984536566740, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
+      propertyPath: OnResponseSelected.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6410940556634295812, guid: c9408bd908e89af4baf999e43def87d6, type: 3}
       propertyPath: m_Color.a
