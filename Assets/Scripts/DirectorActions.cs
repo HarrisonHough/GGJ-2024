@@ -65,7 +65,7 @@ public class DirectorActions : MonoBehaviour
         yield return new WaitForSeconds(response.audioClip.length);
         if (lineType == LineType.Good && audienceLaugh != null )
         {
-            yield return new WaitForSeconds(audienceLaugh.length);
+            yield return new WaitForSeconds(audienceLaugh.length - 4f);
         }
         newCamera.gameObject.SetActive(true);
         PlayLine(lineType);

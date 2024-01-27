@@ -16,7 +16,7 @@ public class AudienceAudio : MonoBehaviour
     public void HandleResponse(PromptResponse response)
     {
         if (response.FunnyRating <= 0) return;
-        StartCoroutine(WaitAndPlayAudio(response.audioClip.length));
+        StartCoroutine(WaitAndPlayAudio(response.audioClip.length - 0.5f));
     }
     
     private IEnumerator WaitAndPlayAudio(float delayInSeconds)
