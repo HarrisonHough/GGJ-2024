@@ -1,5 +1,8 @@
+using System;
+using System.Collections;
 using UnityEngine;
 using System.Collections.Generic;
+using Random = UnityEngine.Random;
 
 public class DirectorActions : MonoBehaviour
 {
@@ -11,6 +14,8 @@ public class DirectorActions : MonoBehaviour
     [SerializeField] private AudioClip[] badLines;
 
     private Dictionary<LineType, (AudioClip[], string)> lines;
+
+    public static Action OnDirectorResponse;
     
     private void Awake()
     {
@@ -38,5 +43,11 @@ public class DirectorActions : MonoBehaviour
     {
         var lineType = (LineType) line;
         PlayLine(lineType);
+    }
+    
+    private IEnumerator WaitForDirectorsAudio(float delayInSeconds)
+    {
+        yield return new WaitForSeconds(delayInSeconds);
+        OnDirectorResponse?.Invoke();
     }
 }

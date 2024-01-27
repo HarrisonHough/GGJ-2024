@@ -15,12 +15,13 @@ public class LaughBar : MonoBehaviour
     private void Start()
     {
         SetProgress();
+        //this will apply the progress that was set in AddProgress
+        DirectorActions.OnDirectorResponse += SetProgress;
     }
 
     public void AddProgress(PromptResponse response)
     {
         progress = Mathf.Clamp01(progress + response.FunnyRating/GameManager.SCORE_TARGET);
-        SetProgress();
     }
 
     private void SetProgress()
