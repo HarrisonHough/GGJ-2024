@@ -7697,6 +7697,10 @@ PrefabInstance:
       value: Cameras
       objectReference: {fileID: 0}
     - target: {fileID: 8069716476735199485, guid: c1fecf41a42d3de42a92c0e8c12e46ad, type: 3}
+      propertyPath: m_Name
+      value: DirectorCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 8069716476735199485, guid: c1fecf41a42d3de42a92c0e8c12e46ad, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}

@@ -10,6 +10,17 @@ public class InteractionPoint : MonoBehaviour
     public static Action<PromptData> OnPromptTriggered;
     private bool isTriggeredOnce;
 
+    private void Start()
+    {
+        DirectorActions.OnDirectorResponse += OnDirectorResponse;
+    }
+
+    private void OnDirectorResponse()
+    {
+        if (!isTriggeredOnce) return;
+        newCamera.gameObject.SetActive(false);
+    }
+
     public Vector3 GetDestinationPosition()
     {
         return viewPoint.position;
