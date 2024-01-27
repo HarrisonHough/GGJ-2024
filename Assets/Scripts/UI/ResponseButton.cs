@@ -27,6 +27,7 @@ public class ResponseButton : MonoBehaviour
     private void OnButtonClick()
     {
         OnResponseSelected?.Invoke(promptResponse.FunnyRating);
-  
+        GameManager.Instance.SwitchToMainCamera();
+        GameManager.Instance.SetGameState(GameState.Playing);
     }
 }

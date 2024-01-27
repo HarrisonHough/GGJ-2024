@@ -1082,7 +1082,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e16df4249121d4595b7fb368d8de5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cinemachineBrain: {fileID: 1310304133}
   newCamera: {fileID: 1686897825}
   viewPoint: {fileID: 734411787}
   promptData: {fileID: 11400000, guid: a49662b120cd5364086386c484113831, type: 2}
@@ -1368,7 +1367,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e16df4249121d4595b7fb368d8de5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cinemachineBrain: {fileID: 1310304133}
   newCamera: {fileID: 646486576}
   viewPoint: {fileID: 1267959023}
   promptData: {fileID: 11400000, guid: a49662b120cd5364086386c484113831, type: 2}
@@ -1683,7 +1681,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e16df4249121d4595b7fb368d8de5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cinemachineBrain: {fileID: 1310304133}
   newCamera: {fileID: 232866809}
   viewPoint: {fileID: 499851767}
   promptData: {fileID: 11400000, guid: a49662b120cd5364086386c484113831, type: 2}
@@ -3131,7 +3128,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e16df4249121d4595b7fb368d8de5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cinemachineBrain: {fileID: 1310304133}
   newCamera: {fileID: 489748417}
   viewPoint: {fileID: 224422592}
   promptData: {fileID: 11400000, guid: a49662b120cd5364086386c484113831, type: 2}
@@ -3202,7 +3198,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e16df4249121d4595b7fb368d8de5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cinemachineBrain: {fileID: 1310304133}
   newCamera: {fileID: 249534378}
   viewPoint: {fileID: 1723976620}
   promptData: {fileID: 11400000, guid: a49662b120cd5364086386c484113831, type: 2}
@@ -3583,6 +3578,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30b78cbbdf89eb543a3e178ba836c947, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cinemachineBrain: {fileID: 1310304133}
+  mainCamera: {fileID: 116182477}
 --- !u!4 &836121186
 Transform:
   m_ObjectHideFlags: 0
@@ -3863,7 +3860,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e16df4249121d4595b7fb368d8de5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cinemachineBrain: {fileID: 1310304133}
   newCamera: {fileID: 381282742}
   viewPoint: {fileID: 807602689}
   promptData: {fileID: 11400000, guid: a49662b120cd5364086386c484113831, type: 2}
@@ -3982,7 +3978,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e16df4249121d4595b7fb368d8de5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cinemachineBrain: {fileID: 1310304133}
   newCamera: {fileID: 1007645212}
   viewPoint: {fileID: 1244906879}
   promptData: {fileID: 11400000, guid: a49662b120cd5364086386c484113831, type: 2}
@@ -4002,7 +3997,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1007645211
 Transform:
   m_ObjectHideFlags: 0
@@ -4972,8 +4967,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1310304131}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0707961, y: 0.89581925, z: -0.15443352, w: 0.4106654}
-  m_LocalPosition: {x: 3.079, y: 2.175, z: 3.33}
+  m_LocalRotation: {x: -0, y: -0.9815773, z: 0.191066, w: 0}
+  m_LocalPosition: {x: 0, y: 2.8, z: 4.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5128,7 +5123,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e16df4249121d4595b7fb368d8de5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cinemachineBrain: {fileID: 1310304133}
   newCamera: {fileID: 907936562}
   viewPoint: {fileID: 1193039831}
   promptData: {fileID: 11400000, guid: a49662b120cd5364086386c484113831, type: 2}
@@ -5199,7 +5193,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e16df4249121d4595b7fb368d8de5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cinemachineBrain: {fileID: 1310304133}
   newCamera: {fileID: 1125279425}
   viewPoint: {fileID: 198022030}
   promptData: {fileID: 11400000, guid: a49662b120cd5364086386c484113831, type: 2}
@@ -5275,7 +5268,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e16df4249121d4595b7fb368d8de5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cinemachineBrain: {fileID: 1310304133}
   newCamera: {fileID: 1148530606}
   viewPoint: {fileID: 207658185}
   promptData: {fileID: 11400000, guid: a49662b120cd5364086386c484113831, type: 2}
@@ -6638,7 +6630,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e16df4249121d4595b7fb368d8de5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cinemachineBrain: {fileID: 1310304133}
   newCamera: {fileID: 1570623560}
   viewPoint: {fileID: 1609495979}
   promptData: {fileID: 11400000, guid: a49662b120cd5364086386c484113831, type: 2}
@@ -7103,7 +7094,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e16df4249121d4595b7fb368d8de5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cinemachineBrain: {fileID: 1310304133}
   newCamera: {fileID: 1873501112}
   viewPoint: {fileID: 2120746794}
   promptData: {fileID: 11400000, guid: a49662b120cd5364086386c484113831, type: 2}
@@ -7316,7 +7306,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e16df4249121d4595b7fb368d8de5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cinemachineBrain: {fileID: 1310304133}
   newCamera: {fileID: 1641506805}
   viewPoint: {fileID: 19643198}
   promptData: {fileID: 11400000, guid: a49662b120cd5364086386c484113831, type: 2}

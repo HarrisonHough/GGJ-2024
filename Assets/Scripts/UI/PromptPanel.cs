@@ -10,7 +10,6 @@ public class PromptPanel : MonoBehaviour
     private void Start()
     {
         panel.SetActive(false);
-        //PromptTrigger.OnPromptTriggered += LoadPrompt;
         InteractionPoint.OnPromptTriggered += LoadPrompt;
     }
     
