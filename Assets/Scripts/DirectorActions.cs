@@ -16,7 +16,6 @@ public class DirectorActions : MonoBehaviour
     [SerializeField] private AudioClip[] neutralLines;
     [SerializeField] private AudioClip[] badLines;
     [SerializeField] private CinemachineVirtualCamera newCamera;
-    [SerializeField] private AudioClip audienceLaugh;
     private Dictionary<LineType, (AudioClip[], string)> lines;
 
     public static Action OnDirectorResponse;
@@ -34,7 +33,12 @@ public class DirectorActions : MonoBehaviour
             {LineType.Bad, (badLines, "Bad")}
         };
     }
-    
+
+    private void OnDestroy()
+    {
+        OnDirectorResponse = null;
+    }
+
     public void PlayLine(LineType lineType)
     {
         var (clips, trigger) = lines[lineType];
@@ -66,9 +70,9 @@ public class DirectorActions : MonoBehaviour
         };
         
         yield return new WaitForSeconds(response.audioClip.length);
-        if (lineType == LineType.Good && audienceLaugh != null )
+        if (lineType == LineType.Good)
         {
-            yield return new WaitForSeconds(audienceLaugh.length - 4f);
+            yield return new WaitForSeconds(3f);
         }
         newCamera.gameObject.SetActive(true);
         PlayLine(lineType);

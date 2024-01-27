@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
             StartCoroutine(WaitAndFinish(goodEndingClip));
             return;
         }
-        if( numberOfResponses >= 12)
+        if(numberOfResponses >= 12)
         {
             PlayerPrefs.SetInt(ENDING_PREF, 1);
             StartCoroutine(WaitAndFinish(neutralEndingClip));

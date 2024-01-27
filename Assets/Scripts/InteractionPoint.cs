@@ -15,6 +15,11 @@ public class InteractionPoint : MonoBehaviour
         DirectorActions.OnDirectorResponse += OnDirectorResponse;
     }
 
+    private void OnDestroy()
+    {
+        OnPromptTriggered = null;
+    }
+
     private void OnDirectorResponse()
     {
         if (!isTriggeredOnce) return;
