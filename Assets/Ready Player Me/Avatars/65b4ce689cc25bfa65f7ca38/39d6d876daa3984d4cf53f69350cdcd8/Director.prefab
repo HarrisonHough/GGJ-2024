@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 4904849532554005844}
   - component: {fileID: 3959965152055299450}
   m_Layer: 0
-  m_Name: Wolf3D_Avatar
+  m_Name: Renderer_Avatar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -922,7 +922,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2198538302956419762}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.96943194, z: -0, w: 0.24536069}
+  m_LocalRotation: {x: 0, y: -0.96943253, z: 0, w: 0.24535823}
   m_LocalPosition: {x: 3.923, y: 0.020171484, z: 7.391}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -930,7 +930,7 @@ Transform:
   - {fileID: 4904849532554005844}
   - {fileID: 2549452742030751113}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -149.54, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -151.594, z: 0}
 --- !u!95 &2200000930899155832
 Animator:
   serializedVersion: 5
