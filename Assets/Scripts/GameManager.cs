@@ -39,10 +39,10 @@ public class GameManager : MonoBehaviour
         }
     }
     
-    public void HandleInteractionResponse(float funnyRating)
+    public void HandleInteractionResponse(PromptResponse response)
     {
         numberOfResponses++;
-        playerScore += funnyRating;
+        playerScore += response.FunnyRating;
         playerScore = Mathf.Clamp(playerScore, 0f,SCORE_TARGET);
         if (playerScore >= SCORE_TARGET)
         {

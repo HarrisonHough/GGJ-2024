@@ -1,19 +1,30 @@
+using System;
 using UnityEngine;
 using Image = UnityEngine.UI.Image;
 
 public class LaughBar : MonoBehaviour
 {
-    [SerializeField, Range(0, 1)] private float progress;
+    [SerializeField, Range(0, 1)] private float progress = 0.5f;
     [SerializeField] private Gradient gradient;
     [SerializeField] private Image fill;
     [SerializeField] private RectTransform handle;
     
     private float minRange = -195;
     private float maxRange = 175f;
-    
-    public void NudgeProgress(float amount)
+
+    private void Start()
     {
-        progress = Mathf.Clamp01(progress + amount/GameManager.SCORE_TARGET);
+        SetProgress();
+    }
+
+    public void AddProgress(PromptResponse response)
+    {
+        progress = Mathf.Clamp01(progress + response.FunnyRating/GameManager.SCORE_TARGET);
+        SetProgress();
+    }
+
+    private void SetProgress()
+    {
         fill.color = gradient.Evaluate(progress);
         handle.anchoredPosition = new Vector2(0, progress * (maxRange - minRange) + minRange);
     }

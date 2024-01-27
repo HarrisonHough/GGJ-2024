@@ -6,7 +6,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Button))]
 public class ResponseButton : MonoBehaviour
 {
-    public UnityEvent<float> OnResponseSelected;
+    public UnityEvent<PromptResponse> OnResponseSelected;
     [SerializeField] private TextMeshProUGUI text;
     private PromptResponse promptResponse;
     private Button button;
@@ -26,7 +26,7 @@ public class ResponseButton : MonoBehaviour
 
     private void OnButtonClick()
     {
-        OnResponseSelected?.Invoke(promptResponse.FunnyRating);
+        OnResponseSelected?.Invoke(promptResponse);
         GameManager.Instance.SwitchToMainCamera();
         GameManager.Instance.SetGameState(GameState.Playing);
     }
