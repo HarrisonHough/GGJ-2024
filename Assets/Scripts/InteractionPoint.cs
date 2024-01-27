@@ -41,4 +41,10 @@ public class InteractionPoint : MonoBehaviour
         newCamera.gameObject.SetActive(false);
         previousCamera.VirtualCameraGameObject.SetActive(true);
     }
+    
+    public void InteractionComplete()
+    {
+        GameManager.Instance.SetGameState(GameState.Playing);
+        ResetCamera();
+    }
 }

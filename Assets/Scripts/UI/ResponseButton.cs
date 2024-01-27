@@ -27,5 +27,6 @@ public class ResponseButton : MonoBehaviour
     private void OnButtonClick()
     {
         OnResponseSelected?.Invoke(promptResponse.FunnyRating);
+  
     }
 }

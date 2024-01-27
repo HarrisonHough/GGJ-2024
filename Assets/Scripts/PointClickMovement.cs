@@ -1,5 +1,5 @@
-using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(PlayerController))]
 public class PointClickMovement : MonoBehaviour
@@ -8,7 +8,7 @@ public class PointClickMovement : MonoBehaviour
     [SerializeField] private LayerMask layerMask;
     private float raycastDistance = 100f;
     private PlayerController playerController;
-
+    
     private void Start()
     {
         playerController = GetComponent<PlayerController>();
@@ -16,6 +16,7 @@ public class PointClickMovement : MonoBehaviour
 
     private void Update()
     {
+        if(GameManager.Instance.GameState != GameState.Playing) return;
         if (!Input.GetMouseButtonDown(0)) return;
         
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
