@@ -45,6 +45,18 @@ public class DirectorActions : MonoBehaviour
         PlayLine(lineType);
     }
     
+    public void PlayLine(PromptResponse response)
+    {
+        var lineType = response.FunnyRating switch
+        {
+            < 0 => LineType.Bad,
+            > 0 => LineType.Good,
+            _ => LineType.Neutral
+        };
+        PlayLine(lineType);
+        StartCoroutine(WaitForDirectorsAudio(response.audioClip.length));
+    }
+    
     private IEnumerator WaitForDirectorsAudio(float delayInSeconds)
     {
         yield return new WaitForSeconds(delayInSeconds);

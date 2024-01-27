@@ -1,12 +1,12 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]  
 public class AudienceAudio : MonoBehaviour
 {
-    [SerializeField] private AudioClip laughingClip;
     private AudioSource audioSource;
-
+    public Action OnAudienceResponse;
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -14,18 +14,14 @@ public class AudienceAudio : MonoBehaviour
     
     public void HandleResponse(PromptResponse response)
     {
-        audioSource.clip = laughingClip;
-        audioSource.Play();
+        StartCoroutine(WaitAndPlayAudio(response.audioClip.length));
     }
     
-    public void PlayLaughingAudio(PromptResponse response)
-    {
-        audioSource.clip = laughingClip;
-        audioSource.Play();
-    }
-    
-    private IEnumerator WaitForDirectorsAudio(float delayInSeconds)
+    private IEnumerator WaitAndPlayAudio(float delayInSeconds)
     {
         yield return new WaitForSeconds(delayInSeconds);
+        audioSource.Play();
+        yield return new WaitForSeconds(audioSource.clip.length);
+        OnAudienceResponse?.Invoke();
     }
 }
