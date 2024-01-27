@@ -9,10 +9,11 @@ public class DirectorActions : MonoBehaviour
     private AudioSource audioSource;
     private Animator animator;
     
+    
     [SerializeField] private AudioClip[] goodLines;
     [SerializeField] private AudioClip[] neutralLines;
     [SerializeField] private AudioClip[] badLines;
-
+    [SerializeField] private AudioClip audienceLaugh;
     private Dictionary<LineType, (AudioClip[], string)> lines;
 
     public static Action OnDirectorResponse;
@@ -34,7 +35,7 @@ public class DirectorActions : MonoBehaviour
     {
         var (clips, trigger) = lines[lineType];
         var clip = clips[Random.Range(0, clips.Length)];
-        
+        audioSource.clip = clip;
         audioSource.PlayOneShot(clip);
         animator.SetTrigger(trigger);
     }
@@ -45,7 +46,12 @@ public class DirectorActions : MonoBehaviour
         PlayLine(lineType);
     }
     
-    public void PlayLine(PromptResponse response)
+    public void HandleResponse(PromptResponse response)
+    {
+        StartCoroutine(WaitAndPlayAudio(response));
+    }
+    
+    private IEnumerator WaitAndPlayAudio(PromptResponse response)
     {
         var lineType = response.FunnyRating switch
         {
@@ -53,13 +59,14 @@ public class DirectorActions : MonoBehaviour
             > 0 => LineType.Good,
             _ => LineType.Neutral
         };
+        
+        yield return new WaitForSeconds(response.audioClip.length);
+        if (lineType == LineType.Good && audienceLaugh != null )
+        {
+            yield return new WaitForSeconds(audienceLaugh.length);
+        }
         PlayLine(lineType);
-        StartCoroutine(WaitForDirectorsAudio(response.audioClip.length));
-    }
-    
-    private IEnumerator WaitForDirectorsAudio(float delayInSeconds)
-    {
-        yield return new WaitForSeconds(delayInSeconds);
+        yield return new WaitForSeconds(audioSource.clip.length);
         OnDirectorResponse?.Invoke();
     }
 }

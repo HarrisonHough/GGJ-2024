@@ -7,6 +7,7 @@ public class AudienceAudio : MonoBehaviour
 {
     private AudioSource audioSource;
     public Action OnAudienceResponse;
+
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -14,6 +15,7 @@ public class AudienceAudio : MonoBehaviour
     
     public void HandleResponse(PromptResponse response)
     {
+        if (response.FunnyRating <= 0) return;
         StartCoroutine(WaitAndPlayAudio(response.audioClip.length));
     }
     
