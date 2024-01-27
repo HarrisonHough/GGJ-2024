@@ -3,13 +3,14 @@ using System.Collections;
 using UnityEngine;
 using System.Collections.Generic;
 using Cinemachine;
+using ReadyPlayerMe.Core;
 using Random = UnityEngine.Random;
 
 public class DirectorActions : MonoBehaviour
 {
     private AudioSource audioSource;
     private Animator animator;
-    
+    private VoiceHandler voiceHandler;
     
     [SerializeField] private AudioClip[] goodLines;
     [SerializeField] private AudioClip[] neutralLines;
@@ -24,6 +25,7 @@ public class DirectorActions : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
+        voiceHandler = GetComponent<VoiceHandler>();
         
         lines = new Dictionary<LineType, (AudioClip[], string)>
         {
@@ -40,6 +42,7 @@ public class DirectorActions : MonoBehaviour
         audioSource.clip = clip;
         audioSource.PlayOneShot(clip);
         animator.SetTrigger(trigger);
+        voiceHandler.PlayAudioClip(clip);
     }
     
     public void PlayLine(int line)
