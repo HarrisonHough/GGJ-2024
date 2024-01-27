@@ -7,7 +7,7 @@ public class ScreenFader : MonoBehaviour
     private Image blackScreenImage;
     private bool isFading = false;
 
-    private void Start()
+    private void Awake()
     {
         blackScreenImage = GetComponent<Image>();
         blackScreenImage.color = new Color(0, 0, 0, 0);
