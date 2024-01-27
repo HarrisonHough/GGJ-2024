@@ -1,6 +1,9 @@
+using System;
+
+[Serializable, Flags]
 public enum LineType
 {
-    Good,
-    Neutral,
-    Bad
+    Good = 0,
+    Neutral = 1,
+    Bad = 2
 }
