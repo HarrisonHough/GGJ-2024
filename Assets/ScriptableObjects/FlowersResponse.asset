@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6090183987f7e6c4494bfacdd6b94d10, type: 3}
-  m_Name: BikeResponse
+  m_Name: FlowersResponse
   m_EditorClassIdentifier: 
   responses:
-  - Text: My bike run away.
+  - Text: Bees taking number.
     FunnyRating: 1
-    audioClip: {fileID: 8300000, guid: 38a38d95f064d7a4198d641d258c0de3, type: 3}
-  - Text: Time travel machine.
+    audioClip: {fileID: 8300000, guid: b1e3b28e324493b48b1b359a317fbf79, type: 3}
+  - Text: Plant graveyard.
     FunnyRating: 0.5
-    audioClip: {fileID: 8300000, guid: f9b8dacb89519634d901f862c621ff94, type: 3}
-  - Text: My uncle's rusty jokes.
+    audioClip: {fileID: 8300000, guid: fc4f58b5cf3137043bdc215b844601dd, type: 3}
+  - Text: Something fresh.
     FunnyRating: -0.5
-    audioClip: {fileID: 8300000, guid: 7a0756c7494ac5e42a0766cbbc3409d1, type: 3}
-  - Text: Vintage or old.
+    audioClip: {fileID: 8300000, guid: 5a7e3911927c8644d8e881bcb2592950, type: 3}
+  - Text: Nature's apology.
     FunnyRating: -1
-    audioClip: {fileID: 8300000, guid: 14a94c5aeacba6b499cc238338f6e823, type: 3}
+    audioClip: {fileID: 8300000, guid: cca5ab8299593514db661c006fc1c43e, type: 3}

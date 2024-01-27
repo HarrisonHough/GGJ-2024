@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6090183987f7e6c4494bfacdd6b94d10, type: 3}
+  m_Name: FrameResponse
+  m_EditorClassIdentifier: 
+  responses:
+  - Text: Internet browsing history.
+    FunnyRating: 1
+    audioClip: {fileID: 8300000, guid: 62ffe735164331748b6df4e9e0946b66, type: 3}
+  - Text: Letf the stove on.
+    FunnyRating: 0.5
+    audioClip: {fileID: 8300000, guid: 37f7a0f5adaf8484c80731b2918ffc95, type: 3}
+  - Text: Running out of coffee.
+    FunnyRating: -0.5
+    audioClip: {fileID: 8300000, guid: 8f3207bcd08d3a54d98effda7e90e3a3, type: 3}
+  - Text: Smiling is out of fashion.
+    FunnyRating: -1
+    audioClip: {fileID: 8300000, guid: 54da4897e54a1244ab348aa25b68dd2e, type: 3}
