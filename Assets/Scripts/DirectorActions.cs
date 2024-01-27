@@ -57,8 +57,8 @@ public class DirectorActions : MonoBehaviour
     {
         var lineType = response.FunnyRating switch
         {
-            < 0 => LineType.Bad,
-            > 0 => LineType.Good,
+            < -0.5f => LineType.Bad,
+            > 0.5f => LineType.Good,
             _ => LineType.Neutral
         };
         
@@ -67,9 +67,10 @@ public class DirectorActions : MonoBehaviour
         {
             yield return new WaitForSeconds(audienceLaugh.length);
         }
-        GameManager.Instance.SwitchToCamera(newCamera);
+        newCamera.gameObject.SetActive(true);
         PlayLine(lineType);
         yield return new WaitForSeconds(audioSource.clip.length + 0.5f);
         OnDirectorResponse?.Invoke();
+        newCamera.gameObject.SetActive(false);
     }
 }

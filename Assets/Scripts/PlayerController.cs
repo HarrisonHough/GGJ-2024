@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (navMeshAgent.remainingDistance > characterController.radius)
+        if (navMeshAgent.remainingDistance > characterController.radius + 0.3f)
         {
             animator.SetFloat(AnimMoveSpeed, navMeshAgent.velocity.magnitude);
             navMeshAgent.isStopped = false;
