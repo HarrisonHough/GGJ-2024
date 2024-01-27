@@ -1,6 +1,8 @@
-using System;
+using System.Collections;
 using Cinemachine;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public enum GameState
 {
@@ -15,21 +17,44 @@ public class GameManager : MonoBehaviour
     public GameState GameState {get; private set; } = GameState.Playing;
     [SerializeField] private CinemachineBrain cinemachineBrain;
     [SerializeField] private CinemachineVirtualCamera mainCamera;
-
+    [SerializeField] private AudioClip goodEndingClip;
+    [SerializeField] private AudioClip neutralEndingClip;
+    [SerializeField] private AudioClip badEndingClip;
+    [SerializeField] private AudioClip introClip;
+    [SerializeField] private ScreenFader screenFader;
+    private AudioSource audioSource;
     private float playerScore;
     public const float SCORE_TARGET = 8;
-    public static Action OnGameOver;
-    public static Action OnScoreReached;
     private int numberOfResponses;
+    private const string ENDING_PREF = "ENDING_INDEX";
     
     private void Start()
     {
-        SetGameState(GameState.Playing);
+        audioSource = GetComponent<AudioSource>();
+        SetGameState(GameState.Paused);
         DirectorActions.OnDirectorResponse += AfterDirectorResponse;
+        StartCoroutine(WaitForStart());
     }
 
     private void AfterDirectorResponse()
     {
+        if (playerScore >= SCORE_TARGET)
+        {
+            PlayerPrefs.SetInt(ENDING_PREF, 0);
+            StartCoroutine(WaitAndFinish(goodEndingClip));
+            return;
+        }
+        if( numberOfResponses >= 12)
+        {
+            PlayerPrefs.SetInt(ENDING_PREF, 1);
+            StartCoroutine(WaitAndFinish(neutralEndingClip));
+            return;
+        }
+        if(playerScore <=  0 )
+        {
+            PlayerPrefs.SetInt(ENDING_PREF, 2);
+            StartCoroutine(WaitAndFinish(badEndingClip));
+        }    
         SetGameState(GameState.Playing);
     }
 
@@ -50,21 +75,35 @@ public class GameManager : MonoBehaviour
         numberOfResponses++;
         playerScore += response.FunnyRating;
         playerScore = Mathf.Clamp(playerScore, 0f,SCORE_TARGET);
-        if (playerScore >= SCORE_TARGET)
-        {
-            Debug.Log("You win!");
-            OnGameOver?.Invoke();
-        }
-        if(playerScore <=  0 || numberOfResponses >= 12)
-        {
-            Debug.Log("You lose!");
-            OnGameOver?.Invoke();
-        }
     }
 
     
     public void SetGameState(GameState gameState)
     {
         GameState = gameState;
+    }
+    
+    private IEnumerator WaitForStart()
+    {   
+        PlayAudio(introClip);
+        screenFader.FadeFromBlack(2f);
+        yield return new WaitForSeconds(introClip.length);
+        SetGameState(GameState.Playing);
+    }
+
+    private void PlayAudio(AudioClip audioClip)
+    {
+        audioSource.clip = audioClip;  
+        audioSource.Play();
+    }
+
+    private IEnumerator WaitAndFinish(AudioClip audioClip)
+    {
+        PlayAudio(audioClip);
+        yield return new WaitForSeconds(audioClip.length);
+        var duration = 1f;
+        screenFader.FadeToBlack(duration);
+        yield return new WaitForSeconds(duration);
+        SceneManager.LoadScene(2);
     }
 }
