@@ -33,4 +33,10 @@ public class DirectorActions : MonoBehaviour
         audioSource.PlayOneShot(clip);
         animator.SetTrigger(trigger);
     }
+    
+    public void PlayLine(int line)
+    {
+        var lineType = (LineType) line;
+        PlayLine(lineType);
+    }
 }
