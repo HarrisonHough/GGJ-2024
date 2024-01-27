@@ -20,9 +20,8 @@ public class PointClickMovement : MonoBehaviour
         if (!Input.GetMouseButtonDown(0)) return;
         
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, raycastDistance, layerMask))
+        if (Physics.Raycast(ray, out RaycastHit hit, raycastDistance, layerMask))
         {
             var interactionPoint = hit.collider.gameObject.GetComponent<InteractionPoint>();
             if(interactionPoint != null)

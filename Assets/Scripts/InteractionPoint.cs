@@ -20,15 +20,12 @@ public class InteractionPoint : MonoBehaviour
         return viewPoint.rotation;
     }
     
-    public void ShowPrompt()
+    public void StartInteraction()
     {
         if (isTriggeredOnce) return;
         OnPromptTriggered?.Invoke(promptData);
         isTriggeredOnce = true;
-    }
-    
-    public void SwitchCamera()
-    {
         GameManager.Instance.SwitchToCamera(newCamera);
+        gameObject.SetActive(false);
     }
 }
