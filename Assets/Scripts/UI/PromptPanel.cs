@@ -16,14 +16,16 @@ public class PromptPanel : MonoBehaviour
     public void LoadPrompt(PromptData promptData)
     {
         panel.SetActive(true);
+        var responses = promptData.responses;
+        var myShuffledArray = ArrayShuffler.Shuffle(responses);
         for (var i = 0; i < button.Length; i++)
         {
-            if (i >= promptData.responses.Length)
+            if (i >= myShuffledArray.Length)
             {
                 button[i].gameObject.SetActive(false);
                 return;
             }
-            button[i].SetResponseData(promptData.responses[i]);
+            button[i].SetResponseData(myShuffledArray[i]);
         }
     }
 }
