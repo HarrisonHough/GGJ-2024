@@ -11,7 +11,8 @@ public class PlayerController : MonoBehaviour
     private NavMeshAgent navMeshAgent;
     private Vector3 destination;
     private Animator animator;
-    private static readonly int MoveSpeed = Animator.StringToHash("MoveSpeed");
+    
+    private static readonly int AnimMoveSpeed = Animator.StringToHash("MoveSpeed");
 
     private void Start()
     {
@@ -25,7 +26,7 @@ public class PlayerController : MonoBehaviour
     {
         if (navMeshAgent.remainingDistance > characterController.radius)
         {
-            animator.SetFloat(MoveSpeed, navMeshAgent.velocity.magnitude);
+            animator.SetFloat(AnimMoveSpeed, navMeshAgent.velocity.magnitude);
             navMeshAgent.isStopped = false;
             characterController.SimpleMove(navMeshAgent.velocity);
             Vector3 targetDirection = (navMeshAgent.destination - transform.position).normalized;
@@ -34,7 +35,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            animator.SetFloat(MoveSpeed, 0f);
+            animator.SetFloat(AnimMoveSpeed, 0f);
             navMeshAgent.isStopped = true;
         }
     }
