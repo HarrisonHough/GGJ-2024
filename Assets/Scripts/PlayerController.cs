@@ -56,8 +56,7 @@ public class PlayerController : MonoBehaviour
             if (Quaternion.Angle(transform.rotation, targetRotation) < 1.0f)
             {
                 isFacingTarget = true;
-                interactionPoint.ShowPrompt();
-                interactionPoint.SwitchCamera();
+                interactionPoint.StartInteraction();
                 GameManager.Instance.SetGameState(GameState.Dialogue);
             }
         }
