@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
 
     private bool isFacingTarget;
     
+    
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -57,6 +58,7 @@ public class PlayerController : MonoBehaviour
                 isFacingTarget = true;
                 interactionPoint.ShowPrompt();
                 interactionPoint.SwitchCamera();
+                GameManager.Instance.SetGameState(GameState.Dialogue);
             }
         }
     }

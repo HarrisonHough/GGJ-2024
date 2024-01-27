@@ -553,7 +553,6 @@ Transform:
   - {fileID: 1347646624}
   - {fileID: 2132743857}
   - {fileID: 1186123526}
-  - {fileID: 1552506673}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &104642755
@@ -1083,7 +1082,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e16df4249121d4595b7fb368d8de5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cinemachineBrain: {fileID: 1310304133}
   newCamera: {fileID: 1686897825}
   viewPoint: {fileID: 734411787}
   promptData: {fileID: 11400000, guid: a49662b120cd5364086386c484113831, type: 2}
@@ -1369,7 +1367,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e16df4249121d4595b7fb368d8de5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cinemachineBrain: {fileID: 1310304133}
   newCamera: {fileID: 646486576}
   viewPoint: {fileID: 1267959023}
   promptData: {fileID: 11400000, guid: a49662b120cd5364086386c484113831, type: 2}
@@ -1504,12 +1501,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 342207811}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.08, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.20002395, y: 1.7329373, z: 9.012888}
   m_LocalScale: {x: 1.8181866, y: 1.8181866, z: 1.8181866}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2086190418}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &358698163
 GameObject:
@@ -1684,7 +1681,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e16df4249121d4595b7fb368d8de5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cinemachineBrain: {fileID: 1310304133}
   newCamera: {fileID: 232866809}
   viewPoint: {fileID: 499851767}
   promptData: {fileID: 11400000, guid: a49662b120cd5364086386c484113831, type: 2}
@@ -3132,7 +3128,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e16df4249121d4595b7fb368d8de5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cinemachineBrain: {fileID: 1310304133}
   newCamera: {fileID: 489748417}
   viewPoint: {fileID: 224422592}
   promptData: {fileID: 11400000, guid: a49662b120cd5364086386c484113831, type: 2}
@@ -3203,7 +3198,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e16df4249121d4595b7fb368d8de5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cinemachineBrain: {fileID: 1310304133}
   newCamera: {fileID: 249534378}
   viewPoint: {fileID: 1723976620}
   promptData: {fileID: 11400000, guid: a49662b120cd5364086386c484113831, type: 2}
@@ -3555,6 +3549,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 940668242}
   m_LocalEulerAnglesHint: {x: 0, y: -179.935, z: 0}
+--- !u!1 &836121184
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 836121186}
+  - component: {fileID: 836121185}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &836121185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836121184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30b78cbbdf89eb543a3e178ba836c947, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachineBrain: {fileID: 1310304133}
+  mainCamera: {fileID: 116182477}
+--- !u!4 &836121186
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836121184}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &887968953
 GameObject:
   m_ObjectHideFlags: 3
@@ -3820,7 +3860,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e16df4249121d4595b7fb368d8de5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cinemachineBrain: {fileID: 1310304133}
   newCamera: {fileID: 381282742}
   viewPoint: {fileID: 807602689}
   promptData: {fileID: 11400000, guid: a49662b120cd5364086386c484113831, type: 2}
@@ -3939,7 +3978,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e16df4249121d4595b7fb368d8de5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cinemachineBrain: {fileID: 1310304133}
   newCamera: {fileID: 1007645212}
   viewPoint: {fileID: 1244906879}
   promptData: {fileID: 11400000, guid: a49662b120cd5364086386c484113831, type: 2}
@@ -5085,7 +5123,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e16df4249121d4595b7fb368d8de5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cinemachineBrain: {fileID: 1310304133}
   newCamera: {fileID: 907936562}
   viewPoint: {fileID: 1193039831}
   promptData: {fileID: 11400000, guid: a49662b120cd5364086386c484113831, type: 2}
@@ -5156,7 +5193,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e16df4249121d4595b7fb368d8de5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cinemachineBrain: {fileID: 1310304133}
   newCamera: {fileID: 1125279425}
   viewPoint: {fileID: 198022030}
   promptData: {fileID: 11400000, guid: a49662b120cd5364086386c484113831, type: 2}
@@ -5232,7 +5268,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e16df4249121d4595b7fb368d8de5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cinemachineBrain: {fileID: 1310304133}
   newCamera: {fileID: 1148530606}
   viewPoint: {fileID: 207658185}
   promptData: {fileID: 11400000, guid: a49662b120cd5364086386c484113831, type: 2}
@@ -5442,7 +5477,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1552506673}
   m_Layer: 0
-  m_Name: Nav Obstacles
+  m_Name: Obstacles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5456,8 +5491,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1552506672}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.20002395, y: 1.6529373, z: 9.012888}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5472,7 +5507,7 @@ Transform:
   - {fileID: 792518718}
   - {fileID: 1844782781}
   - {fileID: 1125204967}
-  m_Father: {fileID: 98815288}
+  m_Father: {fileID: 2086190418}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1570623558
 GameObject:
@@ -6595,7 +6630,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e16df4249121d4595b7fb368d8de5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cinemachineBrain: {fileID: 1310304133}
   newCamera: {fileID: 1570623560}
   viewPoint: {fileID: 1609495979}
   promptData: {fileID: 11400000, guid: a49662b120cd5364086386c484113831, type: 2}
@@ -7060,7 +7094,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e16df4249121d4595b7fb368d8de5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cinemachineBrain: {fileID: 1310304133}
   newCamera: {fileID: 1873501112}
   viewPoint: {fileID: 2120746794}
   promptData: {fileID: 11400000, guid: a49662b120cd5364086386c484113831, type: 2}
@@ -7273,7 +7306,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e16df4249121d4595b7fb368d8de5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cinemachineBrain: {fileID: 1310304133}
   newCamera: {fileID: 1641506805}
   viewPoint: {fileID: 19643198}
   promptData: {fileID: 11400000, guid: a49662b120cd5364086386c484113831, type: 2}
@@ -7366,6 +7398,39 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0.001, y: 1.1140001, z: -0.017}
   m_TimeToStationary: 0.5
+--- !u!1 &2086190417
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2086190418}
+  m_Layer: 0
+  m_Name: Navigation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2086190418
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086190417}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.20002395, y: -1.6529373, z: -9.012888}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1552506673}
+  - {fileID: 342207816}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2087738637
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7376,7 +7441,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -6689036041284674117, guid: be182389eea0f7449b15735def733c11, type: 3}
       propertyPath: m_Name
-      value: saxophone
+      value: Saxophone
       objectReference: {fileID: 0}
     - target: {fileID: -6689036041284674117, guid: be182389eea0f7449b15735def733c11, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -7938,8 +8003,9 @@ SceneRoots:
   - {fileID: 556147771}
   - {fileID: 180571587}
   - {fileID: 98815288}
+  - {fileID: 2086190418}
   - {fileID: 319909242}
   - {fileID: 515663197}
   - {fileID: 2017745028254908302}
-  - {fileID: 342207816}
   - {fileID: 329196183}
+  - {fileID: 836121186}
