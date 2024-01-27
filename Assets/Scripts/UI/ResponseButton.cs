@@ -6,7 +6,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Button))]
 public class ResponseButton : MonoBehaviour
 {
-    public UnityEvent<int> OnResponseSelected;
+    public UnityEvent<float> OnResponseSelected;
     [SerializeField] private TextMeshProUGUI text;
     private PromptResponse promptResponse;
     private Button button;

@@ -16,7 +16,6 @@ public class PromptPanel : MonoBehaviour
     public void LoadPrompt(PromptData promptData)
     {
         panel.SetActive(true);
-        promptTMP.text = promptData.promptText;
         for (var i = 0; i < button.Length; i++)
         {
             if (i >= promptData.responses.Length)

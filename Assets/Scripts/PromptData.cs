@@ -5,12 +5,12 @@ using UnityEngine;
 public struct PromptResponse
 {
     public string Text;
-    public int FunnyRating;
+    public float FunnyRating;
+    public AudioClip audioClip;
 }
 
 [CreateAssetMenu(fileName = "PromptData", menuName = "ScriptableObjects/PromptData", order = 1)]
 public class PromptData : ScriptableObject
 {
-    public string promptText;
     public PromptResponse[] responses;
 }
