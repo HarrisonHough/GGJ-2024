@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 3.0f; 
     [SerializeField] private float rotationSpeed = 5.0f; 
+    [SerializeField] private InteractionPoint interactionPoint; 
     
     private CharacterController characterController;
     private NavMeshAgent navMeshAgent;
@@ -14,12 +15,13 @@ public class PlayerController : MonoBehaviour
     
     private static readonly int AnimMoveSpeed = Animator.StringToHash("MoveSpeed");
 
+    private bool isFacingTarget;
+    
     private void Start()
     {
         animator = GetComponent<Animator>();
         characterController = GetComponent<CharacterController>();
         navMeshAgent = GetComponent<NavMeshAgent>();
-        MouseClickHandler.OnDestinationSet += SetTarget;
     }
 
     private void Update()
@@ -32,16 +34,46 @@ public class PlayerController : MonoBehaviour
             Vector3 targetDirection = (navMeshAgent.destination - transform.position).normalized;
             Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
             transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+            return;
         }
-        else
+        animator.SetFloat(AnimMoveSpeed, 0f);
+        navMeshAgent.isStopped = true;
+        if(!navMeshAgent.pathPending && interactionPoint != null)
         {
-            animator.SetFloat(AnimMoveSpeed, 0f);
-            navMeshAgent.isStopped = true;
+            RotateTowardsTarget();
         }
     }
 
-    public void SetTarget(Vector3 location)
+    private void RotateTowardsTarget()
+    { 
+        var targetRotation = interactionPoint.GetDestinationRotation();
+        isFacingTarget = Quaternion.Angle(transform.rotation, targetRotation) < 1.0f;
+        if (!isFacingTarget)
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+
+            if (Quaternion.Angle(transform.rotation, targetRotation) < 1.0f)
+            {
+                isFacingTarget = true;
+                interactionPoint.ShowPrompt();
+                interactionPoint.SwitchCamera();
+            }
+        }
+    }
+
+    public void SetDestination(InteractionPoint target)
     {
-        navMeshAgent.SetDestination(location);
+        interactionPoint = target;
+        navMeshAgent.SetDestination(interactionPoint.GetDestinationPosition());
+    }
+
+    public void SetDestination(Vector3 destination)
+    {
+        navMeshAgent.SetDestination(destination);
+    }
+    
+    public void ClearInteractionPoint()
+    {
+        interactionPoint = null;
     }
 }

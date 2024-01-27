@@ -1,21 +1,23 @@
+using TMPro;
 using UnityEngine;
 
 public class PromptPanel : MonoBehaviour
 {
-    [SerializeField] private string promptText;
+    [SerializeField] private TextMeshProUGUI promptTMP;
     [SerializeField] private ResponseButton[] button;
     [SerializeField] private GameObject panel;
     
     private void Start()
     {
-        PromptTrigger.OnPromptTriggered += LoadPrompt;
-        
+        panel.SetActive(false);
+        //PromptTrigger.OnPromptTriggered += LoadPrompt;
+        InteractionPoint.OnPromptTriggered += LoadPrompt;
     }
     
     public void LoadPrompt(PromptData promptData)
     {
-        panel.SetActive(false);
-        promptText = promptData.promptText;
+        panel.SetActive(true);
+        promptTMP.text = promptData.promptText;
         for (var i = 0; i < button.Length; i++)
         {
             if (i >= promptData.responses.Length)
@@ -23,7 +25,7 @@ public class PromptPanel : MonoBehaviour
                 button[i].gameObject.SetActive(false);
                 return;
             }
-            button[i].SetText(promptData.responses[i].Text);
+            button[i].SetResponseData(promptData.responses[i]);
         }
     }
 }

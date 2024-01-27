@@ -1,12 +1,31 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
 
+[RequireComponent(typeof(Button))]
 public class ResponseButton : MonoBehaviour
 {
+    public UnityEvent<int> OnResponseSelected;
     [SerializeField] private TextMeshProUGUI text;
+    private PromptResponse promptResponse;
+    private Button button;
 
-    public void SetText(string newText)
+    private void Start()
     {
-        text.SetText(newText);
+        button = GetComponent<Button>();
+        button.onClick.AddListener(OnButtonClick);
+    }
+
+    public void SetResponseData(PromptResponse response)
+    {
+        promptResponse = response;
+        text.SetText(promptResponse.Text);
+        
+    }
+
+    private void OnButtonClick()
+    {
+        OnResponseSelected?.Invoke(promptResponse.FunnyRating);
     }
 }
