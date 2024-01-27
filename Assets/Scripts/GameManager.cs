@@ -25,6 +25,13 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         SetGameState(GameState.Playing);
+        DirectorActions.OnDirectorResponse += AfterDirectorResponse;
+    }
+
+    private void AfterDirectorResponse()
+    {
+        SwitchToMainCamera();
+        SetGameState(GameState.Playing);
     }
 
     private void Awake()
