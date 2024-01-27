@@ -12,4 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6090183987f7e6c4494bfacdd6b94d10, type: 3}
   m_Name: RadiatorResponse
   m_EditorClassIdentifier: 
-  responses: []
+  responses:
+  - Text: Campfire memories.
+    FunnyRating: 1
+    audioClip: {fileID: 8300000, guid: c944a9c4b9321f6448452a00d59c3cff, type: 3}
+  - Text: Antique toast maker.
+    FunnyRating: 0.5
+    audioClip: {fileID: 8300000, guid: 60c546f5fa5a83a439f253047c8e029e, type: 3}
+  - Text: Heat relic.
+    FunnyRating: -0.5
+    audioClip: {fileID: 8300000, guid: 52b0cd5eb9695a84aa44250c11001742, type: 3}
+  - Text: Museum exibit.
+    FunnyRating: -1
+    audioClip: {fileID: 8300000, guid: a8c81cdfc8db69847be524c85634442f, type: 3}

@@ -12,4 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6090183987f7e6c4494bfacdd6b94d10, type: 3}
   m_Name: TvResponse
   m_EditorClassIdentifier: 
-  responses: []
+  responses:
+  - Text: History documentaries.
+    FunnyRating: 1
+    audioClip: {fileID: 8300000, guid: d1217e3543107cc42a859a3e7eef6003, type: 3}
+  - Text: Backwards time travel.
+    FunnyRating: 0.5
+    audioClip: {fileID: 8300000, guid: ef6aa180f03ac974d834f2ad75f454eb, type: 3}
+  - Text: Prehistoric or vintage?
+    FunnyRating: -0.5
+    audioClip: {fileID: 8300000, guid: f06b6c47ac2f6c84fbb96e5822e8a4a8, type: 3}
+  - Text: Black and white.
+    FunnyRating: -1
+    audioClip: {fileID: 8300000, guid: bc72d9cf272255f438e96781f4dbc901, type: 3}
