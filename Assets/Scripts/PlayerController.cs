@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetFloat(AnimMoveSpeed, navMeshAgent.velocity.magnitude);
             navMeshAgent.isStopped = false;
-            characterController.SimpleMove(navMeshAgent.velocity);
+            characterController.SimpleMove(navMeshAgent.velocity * Time.deltaTime * moveSpeed);
             Vector3 targetDirection = (navMeshAgent.destination - transform.position).normalized;
             Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
             transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
