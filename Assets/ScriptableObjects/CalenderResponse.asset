@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   responses:
   - Text: My grandma's fashion.
-    FunnyRating: 1
+    FunnyRating: 2
     audioClip: {fileID: 8300000, guid: ce5cc0337c0824546b9ff33ec9b35bb0, type: 3}
   - Text: Let go of the past.
-    FunnyRating: 0
+    FunnyRating: 1
     audioClip: {fileID: 8300000, guid: f1cda78453eefc44680303c5675cfe10, type: 3}
   - Text: Living in the past.
-    FunnyRating: 0
+    FunnyRating: 3
     audioClip: {fileID: 8300000, guid: 5281254804a26054fa770dfe09f086c1, type: 3}
   - Text: Collector's item.
-    FunnyRating: 3
+    FunnyRating: 4
     audioClip: {fileID: 8300000, guid: e344a5114586a0e4e9e7e48b900f06b2, type: 3}

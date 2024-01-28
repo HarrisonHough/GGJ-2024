@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   responses:
   - Text: Internet browsing history.
-    FunnyRating: 1
+    FunnyRating: 2
     audioClip: {fileID: 8300000, guid: 62ffe735164331748b6df4e9e0946b66, type: 3}
   - Text: Left the stove on.
-    FunnyRating: 0
+    FunnyRating: 1
     audioClip: {fileID: 8300000, guid: 37f7a0f5adaf8484c80731b2918ffc95, type: 3}
   - Text: Running out of coffee.
-    FunnyRating: 0
+    FunnyRating: 3
     audioClip: {fileID: 8300000, guid: 8f3207bcd08d3a54d98effda7e90e3a3, type: 3}
   - Text: Smiling is out of fashion.
-    FunnyRating: 3
+    FunnyRating: 4
     audioClip: {fileID: 8300000, guid: 54da4897e54a1244ab348aa25b68dd2e, type: 3}

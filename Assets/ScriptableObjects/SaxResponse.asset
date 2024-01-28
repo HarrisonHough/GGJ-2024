@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   responses:
   - Text: It sax.
-    FunnyRating: 1
+    FunnyRating: 2
     audioClip: {fileID: 8300000, guid: 96b389d5a3ae58447b21816c187bdcdb, type: 3}
   - Text: Sax up the mood.
-    FunnyRating: 0
+    FunnyRating: 1
     audioClip: {fileID: 8300000, guid: 904ae5e4a0de6f44d992820cc0f494a9, type: 3}
   - Text: Party soundtrack.
-    FunnyRating: 0
+    FunnyRating: 3
     audioClip: {fileID: 8300000, guid: 03c54bbdca01e01428a896087a67a666, type: 3}
   - Text: Harder than taxes.
-    FunnyRating: 3
+    FunnyRating: 4
     audioClip: {fileID: 8300000, guid: 2a015b1842170884f8be93ce3bde15ae, type: 3}

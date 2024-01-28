@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   responses:
   - Text: Drawn to death.
-    FunnyRating: 1
+    FunnyRating: 2
     audioClip: {fileID: 8300000, guid: dd915022f904e5b47b7470c5f9d6d528, type: 3}
   - Text: Outlining personality.
-    FunnyRating: 0
+    FunnyRating: 1
     audioClip: {fileID: 8300000, guid: c296d0065dd39414a8a0d6dc9ed51ff7, type: 3}
   - Text: Crime scene or art class.
-    FunnyRating: 0
+    FunnyRating: 3
     audioClip: {fileID: 8300000, guid: 4aeaf735486c29047bf2b11e53f76321, type: 3}
   - Text: Laying down the job.
-    FunnyRating: 3
+    FunnyRating: 4
     audioClip: {fileID: 8300000, guid: 0bfecda153f9ea14f8b4639b3b2b20c7, type: 3}

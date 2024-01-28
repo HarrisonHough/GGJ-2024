@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   responses:
   - Text: My bike run away.
-    FunnyRating: 1
+    FunnyRating: 2
     audioClip: {fileID: 8300000, guid: 38a38d95f064d7a4198d641d258c0de3, type: 3}
   - Text: Time travel machine.
-    FunnyRating: 0
+    FunnyRating: 1
     audioClip: {fileID: 8300000, guid: f9b8dacb89519634d901f862c621ff94, type: 3}
   - Text: My uncle's rusty jokes.
-    FunnyRating: 0
+    FunnyRating: 3
     audioClip: {fileID: 8300000, guid: 7a0756c7494ac5e42a0766cbbc3409d1, type: 3}
   - Text: Vintage or old.
-    FunnyRating: 3
+    FunnyRating: 4
     audioClip: {fileID: 8300000, guid: 14a94c5aeacba6b499cc238338f6e823, type: 3}

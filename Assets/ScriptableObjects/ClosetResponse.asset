@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   responses:
   - Text: More skeletons than clothes.
-    FunnyRating: 1
+    FunnyRating: 2
     audioClip: {fileID: 8300000, guid: d161d54cade2a39489b384202aa533e4, type: 3}
   - Text: Time machine to 1800.
-    FunnyRating: 0
+    FunnyRating: 1
     audioClip: {fileID: 8300000, guid: 42b7eb1573b2d2c42b328f3bc0b36cec, type: 3}
   - Text: Is it haunted?
-    FunnyRating: 0
+    FunnyRating: 3
     audioClip: {fileID: 8300000, guid: 9a5bbe5c27caa554bb2fd050f64bd1b4, type: 3}
   - Text: Modernity overrated.
-    FunnyRating: 3
+    FunnyRating: 4
     audioClip: {fileID: 8300000, guid: 6e2c6c43ed858f64c8ae2c7950bf42d0, type: 3}
