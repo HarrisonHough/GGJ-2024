@@ -26,6 +26,10 @@ public class PointClickMovement : MonoBehaviour
             {
                 mouseCursor.SetIconToSpeech();
             }
+            else
+            {
+                mouseCursor.SetIconToArrow();
+            }
             
 
             if (Input.GetMouseButtonDown(0) && GameManager.Instance.GameState == GameState.Playing)
