@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   responses:
   - Text: More magnets than food.
-    FunnyRating: 1
+    FunnyRating: 2
     audioClip: {fileID: 8300000, guid: 05c09436a5dad2741831dffda4040121, type: 3}
   - Text: Fridge art.
-    FunnyRating: 0
+    FunnyRating: 1
     audioClip: {fileID: 8300000, guid: 635352bdd6814954599c987cc3b8ea06, type: 3}
   - Text: Every meal missed.
-    FunnyRating: 0
+    FunnyRating: 3
     audioClip: {fileID: 8300000, guid: cda8efefa98ebed468071ce687df731a, type: 3}
   - Text: Forgotten leftovers.
-    FunnyRating: 3
+    FunnyRating: 4
     audioClip: {fileID: 8300000, guid: 6f99dd2e74b15c24aa7e3dec3e71f91a, type: 3}

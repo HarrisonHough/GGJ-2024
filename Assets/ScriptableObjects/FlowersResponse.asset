@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   responses:
   - Text: Bees taking number.
-    FunnyRating: 1
+    FunnyRating: 2
     audioClip: {fileID: 8300000, guid: b1e3b28e324493b48b1b359a317fbf79, type: 3}
   - Text: Plant graveyard.
-    FunnyRating: 0.5
+    FunnyRating: 1
     audioClip: {fileID: 8300000, guid: fc4f58b5cf3137043bdc215b844601dd, type: 3}
   - Text: Something fresh.
-    FunnyRating: -0.5
+    FunnyRating: 3
     audioClip: {fileID: 8300000, guid: 5a7e3911927c8644d8e881bcb2592950, type: 3}
   - Text: Nature's apology.
-    FunnyRating: -1
+    FunnyRating: 4
     audioClip: {fileID: 8300000, guid: cca5ab8299593514db661c006fc1c43e, type: 3}

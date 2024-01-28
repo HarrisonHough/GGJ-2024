@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   responses:
   - Text: Table for one.
-    FunnyRating: 1
+    FunnyRating: 2
     audioClip: {fileID: 8300000, guid: 0d0142c6a2bd5b6448546178c685678f, type: 3}
   - Text: Swimming upstream.
-    FunnyRating: 0
+    FunnyRating: 1
     audioClip: {fileID: 8300000, guid: cb89c086ae4eaf046bac14ec96b15a9f, type: 3}
   - Text: No need for a cat.
-    FunnyRating: 0
+    FunnyRating: 3
     audioClip: {fileID: 8300000, guid: 8cf3f19920ebbe64783f19e5457f9946, type: 3}
   - Text: Scare the scales off.
-    FunnyRating: 3
+    FunnyRating: 4
     audioClip: {fileID: 8300000, guid: 8d69760dd1d8c3f429ecbb393cfeb4ad, type: 3}
