@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private ScreenFader screenFader;
     private AudioSource audioSource;
     private float playerScore;
-    public const float SCORE_TARGET = 8;
+    public const float SCORE_TARGET = 5;
     private int numberOfResponses;
     private const string ENDING_PREF = "ENDING_INDEX";
     
@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
 
     private void AfterDirectorResponse()
     {
+        Debug.Log($"AfterDirectorResponse score: {playerScore}");
         if (playerScore >= SCORE_TARGET)
         {
             PlayerPrefs.SetInt(ENDING_PREF, 0);
@@ -74,6 +75,8 @@ public class GameManager : MonoBehaviour
     {
         numberOfResponses++;
         playerScore += response.FunnyRating;
+        Debug.Log($"added {response.FunnyRating} to score, score is now {playerScore}");
+
         playerScore = Mathf.Clamp(playerScore, 0f,SCORE_TARGET);
     }
 

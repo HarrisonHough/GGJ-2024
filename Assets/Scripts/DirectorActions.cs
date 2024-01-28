@@ -19,7 +19,7 @@ public class DirectorActions : MonoBehaviour
     private Dictionary<LineType, (AudioClip[], string)> lines;
 
     public static Action OnDirectorResponse;
-    
+    private bool isPlayingAudio;
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
@@ -57,6 +57,8 @@ public class DirectorActions : MonoBehaviour
     
     public void HandleResponse(PromptResponse response)
     {
+        if(isPlayingAudio) return;
+        isPlayingAudio = true;
         StartCoroutine(WaitAndPlayAudio(response));
     }
     
@@ -79,5 +81,6 @@ public class DirectorActions : MonoBehaviour
         yield return new WaitForSeconds(audioSource.clip.length + 0.5f);
         OnDirectorResponse?.Invoke();
         newCamera.gameObject.SetActive(false);
+        isPlayingAudio = false;
     }
 }
