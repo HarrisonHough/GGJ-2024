@@ -32,9 +32,9 @@ public class GameManager : MonoBehaviour
     {
         {FunnyRating.Neutral, 0f},
         {FunnyRating.LittleFunny, 0.05f},
-        {FunnyRating.Funny, 0.1f},
+        {FunnyRating.Funny, 0.15f},
         {FunnyRating.NotFunny, -0.05f},
-        {FunnyRating.ReallyNotFunny, -0.1f}
+        {FunnyRating.ReallyNotFunny, -0.15f}
     };
     
     private void Start()
