@@ -21,7 +21,8 @@ public class LaughBar : MonoBehaviour
 
     public void AddProgress(PromptResponse response)
     {
-        progress = Mathf.Clamp01(progress + response.FunnyRating/GameManager.SCORE_TARGET);
+        
+        progress = Mathf.Clamp01(progress + GameManager.FunnyRatingToScore[response.FunnyRating]);
     }
 
     private void SetProgress()

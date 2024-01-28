@@ -1,8 +1,8 @@
 using System.Collections;
+using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 
 public enum GameState
 {
@@ -24,13 +24,23 @@ public class GameManager : MonoBehaviour
     [SerializeField] private ScreenFader screenFader;
     private AudioSource audioSource;
     private float playerScore;
-    public const float SCORE_TARGET = 5;
+    public const float SCORE_TARGET = 1;
     private int numberOfResponses;
     private const string ENDING_PREF = "ENDING_INDEX";
+    
+    public static Dictionary<FunnyRating, float> FunnyRatingToScore = new Dictionary<FunnyRating, float>
+    {
+        {FunnyRating.Neutral, 0f},
+        {FunnyRating.LittleFunny, 0.05f},
+        {FunnyRating.Funny, 0.1f},
+        {FunnyRating.NotFunny, -0.05f},
+        {FunnyRating.ReallyNotFunny, -0.1f}
+    };
     
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        playerScore = 0.5f;
         SetGameState(GameState.Paused);
         DirectorActions.OnDirectorResponse += AfterDirectorResponse;
         StartCoroutine(WaitForStart());
@@ -74,7 +84,7 @@ public class GameManager : MonoBehaviour
     public void HandleInteractionResponse(PromptResponse response)
     {
         numberOfResponses++;
-        playerScore += response.FunnyRating;
+        playerScore += FunnyRatingToScore[response.FunnyRating];
         Debug.Log($"added {response.FunnyRating} to score, score is now {playerScore}");
 
         playerScore = Mathf.Clamp(playerScore, 0f,SCORE_TARGET);

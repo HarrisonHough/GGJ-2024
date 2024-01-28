@@ -65,8 +65,10 @@ public class DirectorActions : MonoBehaviour
     {
         var lineType = response.FunnyRating switch
         {
-            < -0.5f => LineType.Bad,
-            > 0.5f => LineType.Good,
+            FunnyRating.NotFunny => LineType.Bad,
+            FunnyRating.ReallyNotFunny => LineType.Bad,
+            FunnyRating.Funny => LineType.Good,
+            FunnyRating.LittleFunny=> LineType.Good,
             _ => LineType.Neutral
         };
         

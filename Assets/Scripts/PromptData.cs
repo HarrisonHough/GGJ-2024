@@ -1,11 +1,20 @@
 using System;
 using UnityEngine;
 
+public enum FunnyRating
+{
+    Neutral,
+    LittleFunny,
+    Funny,
+    NotFunny,
+    ReallyNotFunny
+}
+
 [Serializable]
 public struct PromptResponse
 {
     public string Text;
-    public float FunnyRating;
+    public FunnyRating FunnyRating;
     public AudioClip audioClip;
 }
 
