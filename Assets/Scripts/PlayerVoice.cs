@@ -17,6 +17,6 @@ public class PlayerVoice : MonoBehaviour
         audioSource.clip = response.audioClip;
         audioSource.Play();
         animator.SetTrigger("Talk");
-        animator.SetFloat("TalkIndex", Random.Range(0, 3));
+        animator.SetInteger("TalkIndex", Random.Range(0, 3));
     }
 }

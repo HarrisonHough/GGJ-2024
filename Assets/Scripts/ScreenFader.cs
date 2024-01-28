@@ -31,7 +31,7 @@ public class ScreenFader : MonoBehaviour
 
     private IEnumerator Fade(float fadeDuration, Color startColor, Color targetColor)
     {
-        blackScreenImage.enabled = true;
+        blackScreenImage.raycastTarget = true;
         isFading = true;
         var elapsedTime = 0f;
         var currentColor = startColor;
@@ -43,9 +43,9 @@ public class ScreenFader : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-
+        
         blackScreenImage.color = targetColor;
-        blackScreenImage.enabled = false;
+        blackScreenImage.raycastTarget = false;
         isFading = false;
     }
 }
