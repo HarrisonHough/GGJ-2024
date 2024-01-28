@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance {get; private set; }
     public GameState GameState {get; private set; } = GameState.Playing;
     [SerializeField] private CinemachineBrain cinemachineBrain;
-    [SerializeField] private CinemachineVirtualCamera mainCamera;
+    [SerializeField] private CinemachineVirtualCamera directorCamera;
     [SerializeField] private AudioClip goodEndingClip;
     [SerializeField] private AudioClip neutralEndingClip;
     [SerializeField] private AudioClip badEndingClip;
@@ -100,7 +100,9 @@ public class GameManager : MonoBehaviour
     {   
         PlayAudio(introClip);
         screenFader.FadeFromBlack(2f);
+        directorCamera.gameObject.SetActive(true);
         yield return new WaitForSeconds(introClip.length);
+        directorCamera.gameObject.SetActive(false);
         SetGameState(GameState.Playing);
     }
 
@@ -113,6 +115,7 @@ public class GameManager : MonoBehaviour
     private IEnumerator WaitAndFinish(AudioClip audioClip)
     {
         PlayAudio(audioClip);
+        directorCamera.gameObject.SetActive(true);
         yield return new WaitForSeconds(audioClip.length);
         var duration = 1f;
         screenFader.FadeToBlack(duration);

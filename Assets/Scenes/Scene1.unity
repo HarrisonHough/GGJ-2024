@@ -3441,7 +3441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cinemachineBrain: {fileID: 1310304133}
-  mainCamera: {fileID: 116182477}
+  directorCamera: {fileID: 82526973}
   goodEndingClip: {fileID: 8300000, guid: a95a388ffde9eb5429f18b0bee0ccdc5, type: 3}
   neutralEndingClip: {fileID: 8300000, guid: b9b5d859e02a15149ad68af54e413a22, type: 3}
   badEndingClip: {fileID: 8300000, guid: 0d2ce0015ae2a1c449b2948203c8aebb, type: 3}
