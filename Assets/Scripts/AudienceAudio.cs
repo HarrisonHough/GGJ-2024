@@ -15,7 +15,7 @@ public class AudienceAudio : MonoBehaviour
     
     public void HandleResponse(PromptResponse response)
     {
-        if (response.FunnyRating == FunnyRating.Funny || response.FunnyRating == FunnyRating.LittleFunny)
+        if (response.FunnyRating == FunnyRating.Funny)
         {
             StartCoroutine(WaitAndPlayAudio(response.audioClip.length - 0.5f));
         }
