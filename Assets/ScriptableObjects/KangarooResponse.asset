@@ -17,11 +17,11 @@ MonoBehaviour:
     FunnyRating: 1
     audioClip: {fileID: 8300000, guid: 5f2d04868afe42340862a9df02c6ab1c, type: 3}
   - Text: Wrong hop.
-    FunnyRating: 0.5
+    FunnyRating: 0
     audioClip: {fileID: 8300000, guid: c0c52e2409aa0c041bb5916deaf0aeb3, type: 3}
   - Text: Cheap trip.
-    FunnyRating: -0.5
+    FunnyRating: 0
     audioClip: {fileID: 8300000, guid: 79791b49d3b6ac844beeeb7b1ed20689, type: 3}
   - Text: Pet responsibility.
-    FunnyRating: -1
+    FunnyRating: 3
     audioClip: {fileID: 8300000, guid: 25271f5a14e54054fa1058e7eefd0c86, type: 3}
