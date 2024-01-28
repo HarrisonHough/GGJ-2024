@@ -44,9 +44,8 @@ public class DirectorActions : MonoBehaviour
         var (clips, trigger) = lines[lineType];
         var clip = clips[Random.Range(0, clips.Length)];
         audioSource.clip = clip;
-        audioSource.PlayOneShot(clip);
+        audioSource.Play();
         animator.SetTrigger(trigger);
-        voiceHandler.PlayAudioClip(clip);
     }
     
     public void PlayLine(int line)
