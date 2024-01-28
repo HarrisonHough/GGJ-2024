@@ -25,7 +25,9 @@ public class DirectorActions : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         voiceHandler = GetComponent<VoiceHandler>();
-        
+        #if UNITY_WEBGL
+            voiceHandler.enabled = false;
+        #endif
         lines = new Dictionary<LineType, (AudioClip[], string)>
         {
             {LineType.Good, (goodLines, "Good")},

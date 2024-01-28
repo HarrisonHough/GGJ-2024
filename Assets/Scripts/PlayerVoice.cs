@@ -1,3 +1,4 @@
+using ReadyPlayerMe.Core;
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
@@ -10,6 +11,13 @@ public class PlayerVoice : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
+#if UNITY_WEBGL
+        var voiceHandler = GetComponent<VoiceHandler>();
+        if (voiceHandler != null)
+        {
+            voiceHandler.enabled = false;
+        }
+#endif
     }
 
     public void PlayPromptAudio(PromptResponse response)
